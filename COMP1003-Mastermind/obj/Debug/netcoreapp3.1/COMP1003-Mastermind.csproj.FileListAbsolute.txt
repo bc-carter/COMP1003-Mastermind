@@ -1,0 +1,12 @@
+C:\Users\Ben\source\repos\COMP1003-Mastermind\bin\Debug\netcoreapp3.1\COMP1003-Mastermind.exe
+C:\Users\Ben\source\repos\COMP1003-Mastermind\bin\Debug\netcoreapp3.1\COMP1003-Mastermind.deps.json
+C:\Users\Ben\source\repos\COMP1003-Mastermind\bin\Debug\netcoreapp3.1\COMP1003-Mastermind.runtimeconfig.json
+C:\Users\Ben\source\repos\COMP1003-Mastermind\bin\Debug\netcoreapp3.1\COMP1003-Mastermind.runtimeconfig.dev.json
+C:\Users\Ben\source\repos\COMP1003-Mastermind\bin\Debug\netcoreapp3.1\COMP1003-Mastermind.dll
+C:\Users\Ben\source\repos\COMP1003-Mastermind\bin\Debug\netcoreapp3.1\COMP1003-Mastermind.pdb
+C:\Users\Ben\source\repos\COMP1003-Mastermind\obj\Debug\netcoreapp3.1\COMP1003-Mastermind.AssemblyInfoInputs.cache
+C:\Users\Ben\source\repos\COMP1003-Mastermind\obj\Debug\netcoreapp3.1\COMP1003-Mastermind.AssemblyInfo.cs
+C:\Users\Ben\source\repos\COMP1003-Mastermind\obj\Debug\netcoreapp3.1\COMP1003-Mastermind.csproj.CoreCompileInputs.cache
+C:\Users\Ben\source\repos\COMP1003-Mastermind\obj\Debug\netcoreapp3.1\COMP1003-Mastermind.dll
+C:\Users\Ben\source\repos\COMP1003-Mastermind\obj\Debug\netcoreapp3.1\COMP1003-Mastermind.pdb
+C:\Users\Ben\source\repos\COMP1003-Mastermind\obj\Debug\netcoreapp3.1\COMP1003-Mastermind.genruntimeconfig.cache
