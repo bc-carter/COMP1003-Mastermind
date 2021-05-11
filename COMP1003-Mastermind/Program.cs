@@ -12,17 +12,17 @@ namespace COMP1003_Mastermind
 
         private bool isPlaying = false;
 
-        string[] colours = { "", "Blue", "Yellow", "Red", "Orange", "Green", "Pink", "Purple", "Brown", "White" }; // used to tell user colours - unnescessary as game solely uses numbers
+        // string[] colours = { "", "Blue", "Yellow", "Red", "Orange", "Green", "Pink", "Purple", "Brown", "White" }; // used to tell user colours - unnescessary as game solely uses numbers
 
         int N = 0; // stores code length
         int M = 0; // stores code range (colours)
 
-        int[,] queue = new int[150,9]; // initialises queue 2d array
+        int[,] queue = new int[150,150]; // initialises queue 2d array
 
         int guesses = 0; // stores current guess number
 
-        bool correctrange = false;
-        bool checkint = false;
+        bool correctrange = false; // used for error handling
+        bool checkint = false; // used for error handling
 
         private int[] currentCode; // stores secret code
 
@@ -55,7 +55,7 @@ namespace COMP1003_Mastermind
                 {
                     while (checkint == false)
                     {
-                        Console.WriteLine("How many positions would you like to play with?");
+                        Console.WriteLine("How many positions would you like to play with?"); 
                         string positions = Console.ReadLine();
                         int.TryParse(positions, out N);
                         if (N >= 1)
@@ -63,7 +63,7 @@ namespace COMP1003_Mastermind
                             action = GameStatus.POSITIONSSELECTED;
                             checkint = true;
                         }
-                        else
+                        else // error handling
                         {
                             Console.ForegroundColor = ConsoleColor.Red;
                             Console.WriteLine("Please enter a number equal to or greater than 1");
@@ -75,7 +75,7 @@ namespace COMP1003_Mastermind
                 {
                     while (correctrange == false)
                     {
-                        Console.WriteLine("How many colours would you like to play using? (1-9)");
+                        Console.WriteLine("How many colours would you like to play with? (1-9)");
                         string colours = Console.ReadLine();
                         int.TryParse(colours, out M);
                         if (M >= 1 && M <= 9)
@@ -88,7 +88,7 @@ namespace COMP1003_Mastermind
                             Console.WriteLine(Environment.NewLine + "You have chosen to play with " + N + " positions.");
                             Console.ResetColor();
                         }
-                        else
+                        else // error handling
                         {
                             Console.ForegroundColor = ConsoleColor.Red;
                             Console.WriteLine("Please enter a number in the range 1-9");
@@ -110,11 +110,11 @@ namespace COMP1003_Mastermind
                         {
                             Console.Write(currentCode[j] + " ");
                         }
-                        Console.Write("- ");
-                        for (int j = 0; j < N; j++)
-                        {
-                            Console.Write(colours[currentCode[j]] + " ");
-                        }
+                        //Console.Write("- ");
+                        //for (int j = 0; j < N; j++)
+                        //{
+                        //    Console.Write(colours[currentCode[j]] + " ");  // can be used to associate colours to numbers
+                        //}
                         Console.ResetColor();
                         action = GameStatus.END;
                     }
@@ -185,11 +185,11 @@ namespace COMP1003_Mastermind
                 {
                     Console.Write(queue[c,i] + " ");
                 }
-                Console.Write("- ");
-                for (int i = 0; i < N; i++)
-                {
-                    Console.Write(colours[queue[c,i]] + " ");
-                }
+                //Console.Write("- ");
+                //for (int i = 0; i < N; i++)
+                //{
+                //    Console.Write(colours[queue[c,i]] + " ");  // can be used to associate numbers with colours
+                //}
                 Console.WriteLine();
             }
             Console.WriteLine("******************************************************");
@@ -257,7 +257,7 @@ namespace COMP1003_Mastermind
 
             while (mind.active && mind.action != GameStatus.QUIT)
             {
-                if (mind.action != GameStatus.PLAYING)
+                if (mind.action != GameStatus.PLAYING) // asks user to enter command if gamestatus isn't PLAYING
                 {
                     Console.WriteLine("Your Command: ");
                 }
